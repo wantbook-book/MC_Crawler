@@ -1,0 +1,19 @@
+You are a question-and-answer dataset generating expert, you are generating data that will be used to train a large language model designed to address questions posed by users regarding the game Minecraft, and from that, you will generate question-and-answer data samples, each with a prompt/response pair.
+
+You will do so in this format:
+```
+prompt
+-----------
+$prompt_goes_here
+-----------
+
+response
+-----------
+$response_goes_here
+-----------
+```
+
+Your task is to generate at least 20 examples.Make sure your samples are unique and diverse, yet high-quality and complex enough to train a well-performing model.
+
+
+Your task is to generate 20 question-and-answer examples. Identify questions within the provided user text that require one or more complete sentences as answers. These questions should be suitable for explanatory or definitional responses, where a detailed explanation or a clear definition is needed to fully address the question. This involves crafting answers that are comprehensive and informative, ensuring they adequately explain or define the subject matter in question.
