@@ -62,9 +62,10 @@ def split_file(file_path: Path, word_count_limit: int = 1000, word_count_thres:i
         print(f'{filename} has been split. Skip.')
         return
     # no need to split
-    if total_word_count <= word_count_limit:
-        with open(split_file_dir / f'{filename}.md', 'w') as split_f:
-            split_f.write(content)
+    # if total_word_count <= word_count_limit:
+    #     with open(split_file_dir / f'{filename}.md', 'w') as split_f:
+    #         split_f.write(content)
+    #     return
     
     # determine the minimum number of split files
     split_file_num = 1
