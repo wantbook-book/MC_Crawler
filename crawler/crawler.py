@@ -201,11 +201,19 @@ class MC_BaiscCrawler:
                     # items Cherry_Boat
                     # TODO: clean
                     # uls in the div tag
-                    sub_uls = next_sib.find_all('ul', recursive=True)
+                    # replicated content: https://minecraft.wiki/w/Enchanting
+                    # so use recursive=False first. but for avoiding data lost, if recursive=False gets None, then use recursive=True
+                    sub_uls = next_sib.find_all('ul', recursive=False)
+                    if sub_uls is None:
+                        sub_uls = next_sib.find_all('ul', recursive=True)
                     # https://minecraft.wiki/w/Trading Notes
-                    sub_ols = next_sib.find_all('ol', recursive=True)
+                    sub_ols = next_sib.find_all('ol', recursive=False)
+                    if sub_ols is None:
+                        sub_ols = next_sib.find_all('ol', recursive=True)
                     # tables in the div tag
-                    sub_tables = next_sib.find_all('table', recursive=True)
+                    sub_tables = next_sib.find_all('table', recursive=False)
+                    if sub_tables is None:
+                        sub_tables = next_sib.find_all('table', recursive=True)
                     if sub_tables:
                         for sub_table in sub_tables:
                             table_content = self.get_table_content(sub_table)
@@ -299,11 +307,21 @@ class MC_BaiscCrawler:
                     for _ in range(colspan-1):
                         row.append('')
 
+                    # <sup>1</sup>/<sub>3</sub> 
+                    # integer text before fraction
+                    int_text = ''
                     row_text = ''
+                    fenzi = ''
+                    fenmu = ''
+                    divide_find = False
                     for content in child.contents:
                         if isinstance(content, NavigableString):
                             row_text += content.strip()
-                            
+                            # unicode not ascii
+                            if content.strip() in ['⁄', '/']:
+                                divide_find = True
+                                continue
+                            int_text += content.strip()
                         elif isinstance(content, Tag):
                             # https://minecraft.wiki/w/Raiser_Armor_Trim#Smithing_ingredient Ingredients
                             if content.name in ['pre', 'style']:
@@ -312,6 +330,18 @@ class MC_BaiscCrawler:
                                 # https://minecraft.wiki/w/Trading list in the table
                                 for li in content.find_all('li', recursive=True):
                                     row_text += li.get_text().strip()+'<br/>'
+                            elif content.name == 'br':
+                                row_text += '<br/>'
+                            elif content.name == 'code':
+                                row_text += '`'+content.get_text().strip()+'`'
+                            elif content.name == 'sup':
+                                fenzi = content.get_text().strip()
+                                row_text += fenzi
+                            elif content.name == 'sub':
+                                fenmu = content.get_text().strip()
+                                row_text += fenmu
+                                if divide_find:
+                                    row_text = '$'+int_text+'\\frac'+'{'+fenzi+'}'+'{'+fenmu+'}$'
                             else:
                                 row_text += content.get_text().strip()
                     row.append(row_text)
