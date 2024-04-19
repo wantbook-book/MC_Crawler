@@ -56,7 +56,7 @@ def to_o_list(items: list[dict], depth: int=0)->str:
     list_str = ''
     for i, item in enumerate(items):
         list_str += '\t'*depth
-        list_str += f'{i}. '
+        list_str += f'{i+1}. '
         list_str += item['title']
         list_str += '\n'
         if item.get('sub_sections'):

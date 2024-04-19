@@ -12,18 +12,31 @@ def crawl():
             'https://minecraft.wiki/w/Mob',
             'https://minecraft.wiki/w/Block',
             'https://minecraft.wiki/w/Item',
+            'https://minecraft.wiki/w/Tutorials'
         ],
         output_dir=urls_dir
     )
     url_crawler.crawl()
-    for file in urls_dir.iterdir():
-        if file.is_file():
-            with open(file, 'r') as f:
-                urls = f.readlines()
-                urls = [url.strip() for url in urls]
-                output_dir = Path('crawler_data') / file.stem
-                crawler = MC_BaiscCrawler(urls, output_dir)
-                crawler.crawl()
+    # for file in urls_dir.iterdir():
+    #     if file.is_file():
+    #         with open(file, 'r') as f:
+    #             urls = f.readlines()
+    #             urls = [url.strip() for url in urls]
+    #             output_dir = Path('crawler_data') / file.stem
+    #             crawler = MC_BaiscCrawler(urls, output_dir)
+    #             crawler.crawl()
+    
+    pages_name = ['Trading', 'Brewing', 'Enchanting', 'Biome', 'Effect', 'Crafting', 'Smelting', 'Smithing', 'Structure', 'Redstone_circuits', 'Archaeology', ]
+    other_pages = [
+        {
+            "urls": [f'https://minecraft.wiki/w/{name}'],
+            "output_dir": Path('crawler_data') / name
+        }
+        for name in pages_name
+    ]
+    for page in other_pages:
+        crawler = MC_BaiscCrawler(page['urls'], page['output_dir'])
+        crawler.crawl()
 
 def split_content():
     content_dirs = [
@@ -37,6 +50,6 @@ def split_content():
                 split_file(content_file, word_count_limit=1000, word_count_thres=40)
 
 if __name__ == '__main__':
-    # crawl()
-    split_content()
+    crawl()
+    # split_content()
     
