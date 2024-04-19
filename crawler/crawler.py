@@ -6,13 +6,15 @@ import time
 sys.path.append('..')
 from bs4 import BeautifulSoup, NavigableString, Tag
 from utils.request import get_html_content
-from utils.markdown import to_md_table, to_header, to_list
+from utils.markdown import to_md_table, to_header, to_list, LIST_TYPE
 import random
 class CONTENT_TYPE:
     TITLE = 'title'
     TEXT = 'text'
     TABLE = 'table'
     LIST = 'list'
+    U_LIST = 'unordered_list'
+    O_LIST = 'ordered_list'
 
 class MC_BaiscCrawler:
     EXCLUDE_TOPICS = ['Achievements', 'Advancements', 'History', 'Issues', 'Trivia', 'Gallery', 'References', 'External links', 'Sounds', 'Video', 'Videos', 'See also']
@@ -120,6 +122,7 @@ class MC_BaiscCrawler:
                 all_content.append(
                     {
                         'type': CONTENT_TYPE.LIST,
+                        'list_type': LIST_TYPE.UL,
                         'content': self.convert_multilevel_toc(ul)
                     }
                 )
@@ -180,9 +183,17 @@ class MC_BaiscCrawler:
                         )
                 elif next_sib.name in ['style']:
                     pass
-                elif next_sib.name == 'ul':
+                elif next_sib.name in 'ul':
                     all_content.append({
                         'type': CONTENT_TYPE.LIST,
+                        'list_type': LIST_TYPE.UL,
+                        'content': self.get_list_data(next_sib)
+                    
+                    })
+                elif next_sib.name in 'ol':
+                    all_content.append({
+                        'type': CONTENT_TYPE.LIST,
+                        'list_type': LIST_TYPE.OL,
                         'content': self.get_list_data(next_sib)
                     
                     })
@@ -191,6 +202,8 @@ class MC_BaiscCrawler:
                     # TODO: clean
                     # uls in the div tag
                     sub_uls = next_sib.find_all('ul', recursive=True)
+                    # https://minecraft.wiki/w/Trading Notes
+                    sub_ols = next_sib.find_all('ol', recursive=True)
                     # tables in the div tag
                     sub_tables = next_sib.find_all('table', recursive=True)
                     if sub_tables:
@@ -202,10 +215,19 @@ class MC_BaiscCrawler:
                                     'content': table_content
                                 }
                             )
-                    if sub_uls:
+                    elif sub_ols:
+                        for ol in sub_ols:
+                            all_content.append({
+                                'type': CONTENT_TYPE.LIST,
+                                'list_type': LIST_TYPE.OL,
+                                'content': self.get_list_data(ol)
+                            
+                            })
+                    elif sub_uls:
                         for ul in sub_uls:
                             all_content.append({
                                 'type': CONTENT_TYPE.LIST,
+                                'list_type': LIST_TYPE.UL,
                                 'content': self.get_list_data(ul)
                             
                             })
@@ -221,43 +243,62 @@ class MC_BaiscCrawler:
         return all_content
     
 
+    def get_col_row_span(self, td: Tag):
+        try:
+            colspan = int(td.get('colspan', 1))
+        except ValueError as e:
+            print(e)
+            print(td)
+            colspan = ''.join(filter(str.isdigit, td.get('colspan', 1)))
+            colspan = int(colspan)
+        try:
+            rowspan = int(td.get('rowspan', 1))
+        except ValueError as e:
+            print(e)
+            print(td)
+            rowspan = ''.join(filter(str.isdigit, td.get('rowspan', 1)))
+            rowspan = int(rowspan)
+        return colspan, rowspan
+
     def get_table_content(self, table: Tag):
-        
-        rows, column_count = [], 0
+        rows, head_column_count = [], 0
         trs = table.find_all('tr', recursive=True)
         # get header
         row = []
-        # for th in trs[0].find_all('th', recursive=False):
-        #     row.append(th.get_text().strip())
-        #     colspan = int(th.get('colspan', 1))
-        #     column_count += colspan
-        #     for _ in range(1, colspan):
-        #         row.append('')
+        row_spans = []
         for child in trs[0].children:
             if child.name in ['td', 'th']:
                 row.append(child.get_text().strip())
-                try:
-                    colspan = int(child.get('colspan', 1))
-                except ValueError as e:
-                    print(e)
-                    print(child)
-                    colspan = ''.join(filter(str.isdigit, child.get('colspan', 1)))
-                    colspan = int(colspan)
-                column_count += colspan
-                for _ in range(1, colspan):
-                    row.append('')
+                colspan, rowspan = self.get_col_row_span(child)
+                for _ in range(head_column_count, head_column_count+colspan):
+                    row_spans.append(rowspan)
+                head_column_count += colspan
 
+                for _ in range(colspan-1):
+                    row.append('')
         rows.append(row)
+
         header = rows[0]
         max_column_num = len(header)
         for tr in trs[1:]:
             row = []
-            tds = tr.find_all('td', recursive=False)
-            ths = tr.find_all('th', recursive=False)
-            for _ in range(column_count-len(tds)-len(ths)):
-                row.append('')
+            column_count = 0
             for child in tr.children:
                 if child.name in ['th', 'td']:
+                    while row_spans[column_count] > 1:
+                        row_spans[column_count] -= 1
+                        row.append('')
+                        column_count += 1
+                    
+                    colspan, rowspan = self.get_col_row_span(child)
+                    for i in range(column_count, column_count+colspan):
+                        if rowspan > row_spans[i]:
+                            row_spans[i] = rowspan
+                    column_count += colspan
+
+                    for _ in range(colspan-1):
+                        row.append('')
+
                     row_text = ''
                     for content in child.contents:
                         if isinstance(content, NavigableString):
@@ -267,40 +308,17 @@ class MC_BaiscCrawler:
                             # https://minecraft.wiki/w/Raiser_Armor_Trim#Smithing_ingredient Ingredients
                             if content.name in ['pre', 'style']:
                                 continue
-                            row_text += content.get_text().strip()
+                            elif content.name in ['ul', 'ol']:
+                                # https://minecraft.wiki/w/Trading list in the table
+                                for li in content.find_all('li', recursive=True):
+                                    row_text += li.get_text().strip()+'<br/>'
+                            else:
+                                row_text += content.get_text().strip()
                     row.append(row_text)
-
-                # if child.name == 'th':
-                #     row.append(child.get_text().strip())
-                # elif child.name == 'td':
-                #     td = child
-            # for th in ths:
-            #     row.append(th.get_text().strip())
-            # for td in tds:
-                # details differs, need to make sure all conditions are covered
-                    # spans = td.find_all('span', recursive=False)
-                    # row_text = ''
-                    # if spans:
-                    #     for span in td.find_all('span', recursive=True):
-                    #         if span.get('class') is not None and 'sprite-text' in span['class']:
-                    #             # the <pre> appears behind the <span> own text
-                    #             # row.append(span.get_text().strip())
-                    #             row_text += span.get_text().strip()
-                    # if row_text:
-                    #     row.append(row_text)
-                    # else:
-                    #     # row.append('')
-                    #     if td.contents:
-                    #         content0 = td.contents[0]
-                    #         if isinstance(content0, NavigableString):
-                    #             row.append(content0.strip())
-                    #         elif isinstance(content0, Tag):
-                    #             row.append(td.get_text().strip())
-                    #         else:
-                    #             print('unexpected content0 type') 
-                    #             row.append('')
-                    #     else:
-                    #         row.append('')
+            while column_count < head_column_count and row_spans[column_count] > 1:
+                row.append('')
+                row_spans[column_count] -= 1
+                column_count += 1
             if max_column_num < len(row):
                 max_column_num = len(row)
             rows.append(row)
@@ -311,16 +329,17 @@ class MC_BaiscCrawler:
                 row.append('')
         return rows
 
-    def get_list_data(self, ul):
+    def get_list_data(self, l):
         sections = []
-        lis = ul.find_all('li', recursive=False)
+        lis = l.find_all('li', recursive=False)
         for li in lis:
             title = ''
             for content in li.contents:
                 if isinstance(content, NavigableString):
                     title += content.strip()
                 elif isinstance(content, Tag):
-                    if content.name == 'ul':
+                    # sub lists exist, then extract it later
+                    if content.name in ['ul', 'ol']:
                         break
                     else:
                         title += content.get_text().strip()
@@ -330,8 +349,16 @@ class MC_BaiscCrawler:
             ul_2 = li.find('ul')
             if ul_2:
                 section['sub_sections'] = self.get_list_data(ul_2)
+                section['sub_sections_list_type'] = LIST_TYPE.UL
+            else:
+                ol_2 = li.find('ol')
+                if ol_2:
+                    section['sub_sections'] = self.get_list_data(ol_2)
+                    section['sub_sections_list_type'] = LIST_TYPE.OL
             sections.append(section)
         return sections
+
+
 
     def convert_multilevel_toc(self, ul):
         sections = []
@@ -343,6 +370,7 @@ class MC_BaiscCrawler:
             ul_2 = li.find('ul')
             if ul_2:
                 section['sub_sections'] = self.convert_multilevel_toc(ul_2)
+                section['sub_sections_list_type'] = LIST_TYPE.UL
             sections.append(section)
         return sections
 
@@ -357,7 +385,7 @@ class MC_BaiscCrawler:
                 elif content['type'] == CONTENT_TYPE.TEXT:
                     f.write(content['content']+'\n')
                 elif content['type'] == CONTENT_TYPE.LIST:
-                    f.write(to_list(content['content'])+'\n')
+                    f.write(to_list(content['content'], list_type=content['list_type'])+'\n')
 
 
 if __name__ == '__main__':

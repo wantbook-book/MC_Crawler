@@ -1,4 +1,7 @@
 from pathlib import Path
+class LIST_TYPE:
+    OL = 'ol'
+    UL = 'ul'
 def to_md_table(table_content: list[list[str]])->str:
     if not table_content:
         return ""
@@ -30,8 +33,14 @@ def to_md_table(table_content: list[list[str]])->str:
 def to_header(title: str, level: int)->str:
     return f"{'#' * level} {title}\n"
 
-
-def to_list(items: list[dict], depth: int=0)->str:
+def to_list(items: list[dict], list_type: LIST_TYPE, depth: int=0)->str:
+    list_str = ''
+    if list_type == LIST_TYPE.OL:
+        list_str += to_o_list(items, depth=depth)
+    elif list_type == LIST_TYPE.UL:
+        list_str += to_u_list(items, depth=depth)
+    return list_str
+def to_u_list(items: list[dict], depth: int=0)->str:
     list_str = ''
     for item in items:
         list_str += '\t'*depth
@@ -40,9 +49,19 @@ def to_list(items: list[dict], depth: int=0)->str:
         list_str += '\n'
 
         if item.get('sub_sections'):
-            list_str += to_list(item['sub_sections'], depth+1)
+            list_str += to_list(item['sub_sections'], list_type=item['sub_sections_list_type'],depth=depth+1)
     return list_str
 
+def to_o_list(items: list[dict], depth: int=0)->str:
+    list_str = ''
+    for i, item in enumerate(items):
+        list_str += '\t'*depth
+        list_str += f'{i}. '
+        list_str += item['title']
+        list_str += '\n'
+        if item.get('sub_sections'):
+            list_str += to_list(item['sub_sections'], list_type=item['sub_sections_list_type'],depth=depth+1)
+    return list_str
 
 def split_file(file_path: Path, word_count_limit: int = 1000, word_count_thres:int = 40):
     # word_count_threshold: if the word count of a split file is less than this value, delete it
