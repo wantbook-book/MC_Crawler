@@ -183,20 +183,63 @@ class MC_BaiscCrawler:
                         )
                 elif next_sib.name in ['style']:
                     pass
-                elif next_sib.name in 'ul':
+                elif next_sib.name == 'ul':
                     all_content.append({
                         'type': CONTENT_TYPE.LIST,
                         'list_type': LIST_TYPE.UL,
                         'content': self.get_list_data(next_sib)
                     
                     })
-                elif next_sib.name in 'ol':
+                elif next_sib.name == 'ol':
                     all_content.append({
                         'type': CONTENT_TYPE.LIST,
                         'list_type': LIST_TYPE.OL,
                         'content': self.get_list_data(next_sib)
                     
                     })
+                # https://minecraft.wiki/w/Redstone_circuits
+                # so many dl dt dd tags, process simply
+                elif next_sib.name == 'dl':
+                    for content in next_sib.contents:
+                        if content.name == 'dt':
+                            all_content.append(
+                                {
+                                    'type': CONTENT_TYPE.TEXT,
+                                    'content': '**'+content.get_text()+'**'
+                                }
+                            )
+                        elif content.name == 'dd':
+                            text = ''
+                            for dd_content in content.contents:
+                                if isinstance(dd_content, NavigableString):
+                                    text += dd_content.strip()
+                                elif isinstance(dd_content, Tag):
+                                    # https://minecraft.wiki/w/Trading#Java_Edition_2
+                                    if dd_content.name in ['ul', 'ol']:
+                                        if text:
+                                            all_content.append(
+                                                {
+                                                    'type': CONTENT_TYPE.TEXT,
+                                                    'content': text
+                                                }
+                                            )
+                                            text = ''
+                                        all_content.append({
+                                            'type': CONTENT_TYPE.LIST,
+                                            'list_type': LIST_TYPE.UL if dd_content.name == 'ul' else LIST_TYPE.OL,
+                                            'content': self.get_list_data(dd_content)
+                                        
+                                        })
+                                    else:
+                                        text += dd_content.get_text()
+                            if text:
+                                all_content.append(
+                                    {
+                                        'type': CONTENT_TYPE.TEXT,
+                                        'content': text
+                                    }
+                                )
+                                text = ''
                 else:
                     # items Cherry_Boat
                     # TODO: clean
@@ -293,19 +336,20 @@ class MC_BaiscCrawler:
             column_count = 0
             for child in tr.children:
                 if child.name in ['th', 'td']:
-                    while row_spans[column_count] > 1:
+                    while column_count < head_column_count and row_spans[column_count] > 1:
                         row_spans[column_count] -= 1
                         row.append('')
                         column_count += 1
-                    
-                    colspan, rowspan = self.get_col_row_span(child)
-                    for i in range(column_count, column_count+colspan):
-                        if rowspan > row_spans[i]:
-                            row_spans[i] = rowspan
-                    column_count += colspan
+                    # https://minecraft.wiki/w/Structure 页面奇怪的某行后面多了一个格子 Buried Treasure
+                    if column_count < head_column_count:
+                        colspan, rowspan = self.get_col_row_span(child)
+                        for i in range(column_count, column_count+colspan):
+                            if rowspan > row_spans[i]:
+                                row_spans[i] = rowspan
+                        column_count += colspan
 
-                    for _ in range(colspan-1):
-                        row.append('')
+                        for _ in range(colspan-1):
+                            row.append('')
 
                     # <sup>1</sup>/<sub>3</sub> 
                     # integer text before fraction
