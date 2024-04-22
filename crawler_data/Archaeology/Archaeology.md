@@ -22,7 +22,7 @@ Players can use a brush on suspicious sand (located in warm ocean ruins, desert 
 
 ## Features
 ### Blocks
-Decorated Pot
+**Decorated Pot**
 - Can be crafted with any 4 pottery sherds orbrickitems, placed in a rhombus shape.
 	- The specific type of crafting material used determines which side of the resulting decorated pot shows a symbol.
 		- The possible symbols are determined by the type of pottery sherd used to craft the pot.
@@ -33,35 +33,35 @@ Decorated Pot
 	- Can be broken with projectiles.
 - Has a single storage slot that allows players to store up to one stack of a block or item.
 
- Sniffer Egg
+** Sniffer Egg**
 - Only found from suspicious sand in warmocean ruins.
 - Hatches intosnifflets.
 - Once two eggs are found, can be continuously obtained bybreedingsniffers withtorchflower seeds.
 
-Suspicious Gravel
+**Suspicious Gravel**
 - Generates in cold ocean ruins andtrail ruins.
 - Brushing the suspicious gravel with a brush extracts items.
 - Suspicious Gravel drops as an item in Survival Mode if it stays in its Falling Block entity state for more than 30 seconds. This can be achieved by dropping the Suspicious Gravel into a two-block deep soul sand bubble column or onto two layers of cobwebs. Both actions slow down the falling Suspicious Gravel enough for its 30-second timer to expire, allowing it to drop in item form.‌[Java Edition  only]
 
-Suspicious Sand
+**Suspicious Sand**
 - Generates indesert temples,desert wells, and warm ocean ruins.
 - Brushing the suspicious sand with a brush extracts items.
 - Suspicious Sand drops as an item in Survival Mode if it stays in its Falling Block entity state for more than 30 seconds. This can be achieved by dropping the Suspicious Sand into a two-block deep soul sand bubble column or onto two layers of cobwebs. Both actions slow down the falling Suspicious Sand enough for its 30-second timer to expire, allowing it to drop in item form.‌[Java Edition  only]
 
 ### Items
-Brush
+**Brush**
 - It is an item which can be used to brush suspicious blocks.
 - Can be crafted with afeather,copper ingotandstick.
 
- Pottery Sherds
+** Pottery Sherds**
 - They have symbolic pictures on them.
 - Different structures contain different pottery sherds.
 - Contains 20 different variants.
 - They cannot be crafted and are only found by brushingsuspicious sandandsuspicious gravel.
 
-Relic Music Disc
+**Relic Music Disc**
 ### World generation
-Trail Ruins
+**Trail Ruins**
 - A buriedgenerated structurefrom a lost culture.
 - Generates intaigas,snowy taigas,old growth taigas(both types),old growth birch forestsandjungles.
 - Comprised of a tower, a path across the bottom, and a few additional rooms attached to the side.

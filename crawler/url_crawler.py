@@ -28,6 +28,36 @@ class URLCrawler:
                 output_urls = self.extract_urls(html_content)
             self.write_to_file(output_urls, filepath)
     
+    def rough_crawl(self):
+        for url in self.urls:
+            filename = url.split('/')[-1]+'.txt'
+            filepath = self.output_dir / filename
+            if filepath.exists():
+                print(f'{filename} exists. skip!')
+                continue
+            html_content = get_html_content(url)
+            output_urls = self.rought_extract_urls(html_content)
+            self.write_to_file(output_urls, filepath)
+    
+    def rought_extract_urls(self, html_content: str):
+        should_not_contain = [':', '?', 'Java_Edition', 'Pocket_Edition', 'Bedrock_Edition', 'Xbox_360_Edition', 'Wii_U_Edition', 'Xbox_One_Edition', 'Nintendo_Switch_Edition', 'Edition']
+        urls = []
+        soup = BeautifulSoup(html_content, 'html.parser')
+        mw_parser_output = soup.find('div', {'class': 'mw-parser-output'})
+        a_tags = mw_parser_output.find_all('a', recursive=True)
+        for a_tag in a_tags:
+            if 'title' in a_tag.attrs and 'href' in a_tag.attrs:
+                url_path = a_tag['href']
+                if not any([word in url_path for word in should_not_contain]):
+                    if '#' in url_path:
+                        url_path = url_path.split('#')[0]
+                    url = self.base_url+url_path
+                    if url not in urls:
+                        urls.append(url)
+
+        return urls
+
+    
     def extract_mob_urls(self, html_content: str):
         urls = []
         soup = BeautifulSoup(html_content, 'html.parser')

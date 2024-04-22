@@ -76,23 +76,23 @@ By adding gunpowder, a drinking potion can be turned into a splash potion, which
 ### Effect ingredients
 Effect ingredients imbue an awkward potion with a particular effect but do not alter potion duration or intensity. When added directly to a water bottle, most of these ingredients produce a mundane potion. The exceptions to this are golden carrot, pufferfish, turtle shell, and phantom membrane, which cannot be added directly to a water bottle.
 
-| Name                   | Icon             | Effect          | Effect when corrupted                                     |
-|------------------------|------------------|-----------------|-----------------------------------------------------------|
-| Sugar                  |                  | Speed           | Slowness                                                  |
-|                        | Rabbit's foot    |                 | Jump Boost                                                |
-| Glistering melon slice |                  | Instant Health  | Instant Damage                                            |
-|                        | Spider eye       |                 | Poison                                                    |
-| Pufferfish             |                  | Water Breathing | None                                                      |
-|                        | Magma cream      |                 | Fire Resistance                                           |
-| Golden carrot          |                  | Night Vision    | Invisibility                                              |
-| Blaze powder           |                  | Strength        | None‌[Java Edition  only]Weakness‌[Bedrock Edition  only] |
-| Ghast tear             |                  | Regeneration    | None                                                      |
-|                        | Turtle shell     |                 | Slowness+Resistance                                       |
-|                        | Phantom membrane |                 | Slow Falling                                              |
-|                        | Breeze rod       |                 | Wind Charged‌[upcoming: JE 1.21 & BE 1.21.0]              |
-|                        | Stone            |                 | Infested‌[upcoming: JE 1.21 & BE 1.21.0]                  |
-|                        | Cobweb           |                 | Weaving‌[upcoming: JE 1.21 & BE 1.21.0]                   |
-|                        | Slime block      |                 | Oozing‌[upcoming: JE 1.21 & BE 1.21.0]                    |
+| Name                   | Icon | Effect                                       | Effect when corrupted                                     |
+|------------------------|------|----------------------------------------------|-----------------------------------------------------------|
+| Sugar                  |      | Speed                                        | Slowness                                                  |
+| Rabbit's foot          |      | Jump Boost                                   |                                                           |
+| Glistering melon slice |      | Instant Health                               | Instant Damage                                            |
+| Spider eye             |      | Poison                                       |                                                           |
+| Pufferfish             |      | Water Breathing                              | None                                                      |
+| Magma cream            |      | Fire Resistance                              |                                                           |
+| Golden carrot          |      | Night Vision                                 | Invisibility                                              |
+| Blaze powder           |      | Strength                                     | None‌[Java Edition  only]Weakness‌[Bedrock Edition  only] |
+| Ghast tear             |      | Regeneration                                 | None                                                      |
+| Turtle shell           |      | Slowness+Resistance                          |                                                           |
+| Phantom membrane       |      | Slow Falling                                 |                                                           |
+| Breeze rod             |      | Wind Charged‌[upcoming: JE 1.21 & BE 1.21.0] |                                                           |
+| Stone                  |      | Infested‌[upcoming: JE 1.21 & BE 1.21.0]     |                                                           |
+| Cobweb                 |      | Weaving‌[upcoming: JE 1.21 & BE 1.21.0]      |                                                           |
+| Slime block            |      | Oozing‌[upcoming: JE 1.21 & BE 1.21.0]       |                                                           |
 
 ## Brewing recipes
 ### Base potions

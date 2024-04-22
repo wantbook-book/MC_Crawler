@@ -205,12 +205,12 @@ These biomes don't generate in default worlds. They have been completely removed
 
 | Biome name                       | Features                                                                                                                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Screenshot                                                    |
 |----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------|
-| Legacy Frozen Ocean              | Polar bears, salmon, cod, strays, cold underwater ruins, gravel, seagrass, kelp, snowy rabbits, ice, shipwrecks                       | Similar to thefrozen oceanbiome, but without icebergs, it is completely flat. Because they are a frozen ocean variant, they can spawn polar bears and strays, but not dolphins. Unlike the regular frozen ocean, polar bears, drowned, squid, salmon, cod, rabbits, skeletons and strays are the only mobs that spawn here. Kelp also generates here. This biome doesn't generate naturally fromPocket Edition Alpha 0.9.0onward. WhenBedrock Edition 1.4.0introduced the new frozen ocean, this biome was not removed or replaced by the new frozen ocean, although the id name changed fromfrozen_oceantolegacy_frozen_ocean.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               | Legacy frozen ocean                                           |
+| Legacy Frozen Ocean              | Polar bears, salmon, cod, strays, cold underwater ruins, gravel, seagrass, kelp, snowy rabbits, ice, shipwrecks                       | Similar to thefrozen oceanbiome, but without icebergs, it is completely flat. Because they are a frozen ocean variant, they can spawn polar bears and strays, but not dolphins. Unlike the regular frozen ocean, polar bears, drowned, squid, salmon, cod, rabbits, skeletons and strays are the only mobs that spawn here. Kelp also generates here. This biome doesn't generate naturally fromPocket Edition Alpha 0.9.0onward. WhenBedrock Edition 1.4.0introduced the new frozen ocean, this biome was not removed or replaced by the new frozen ocean, although the id name changed from`frozen_ocean`to`legacy_frozen_ocean`.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Legacy frozen ocean                                           |
 | Desert Lakes                     | Sand, cacti, water, sugar canes, gold rabbits, desert well, fossils, husks                                                            | In this biome, patches of water are more common, and the terrain is slightly more rough. Although desert wells can be found, desert pyramids, villages and outposts do not generate in this biome.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Desert lakes                                                  |
 | Mountain Edge                    | Grass blocks, dirt, stone, llamas, emerald ore, infested stone, spruce trees, oak trees, snow                                         | Similar to thesparse junglebiome, the mountain edge used to generate exclusively at the edge of windswept hills biomes in order to smooth the transition between biomes. This biome has lots of trees, similar to windswept forests. While the terrain is lower and gentler in nature, some areas may reach high enough to be covered by snow. This biome doesn't generate naturally fromPocket Edition v0.9.0 alphaandJava Edition 1.7.2onward.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Mountain edge                                                 |
 | Deep Warm Ocean                  | Dolphins, pufferfish, tropical fishes, warm underwater ruins, sand, seagrass, ocean monuments, guardians, elder guardians, shipwrecks | Similar to thewarm oceanbiome, but without coral reefs or sea pickles, and twice as deep. Because they are a deep ocean variant, they can generate ocean monuments, resulting in the spawning of guardians, elder guardians,prismarineandsponges.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | Deep warm ocean                                               |
 | Hills                            |                                                                                                                                       | Hills are generated within certain biomes (including some of their variants) and are referred in the F3 menu with "hills" added to their name (except snowy mountains).This includes: wooded hills, taiga hills, snowy taiga hills, jungle hills, desert hills, birch forest hills, tall birch hills, giant tree taiga hills, giant spruce taiga hills, snowy mountains and bamboo jungle hills.Most hills are gentle rolling slopes on which the usual biome terrain generates, with some sharper cliffs here and there. Snowy mountains have a lower chance of spawning passive mobs during world generation than other biomes (7% versus 10%).Giant spruce taiga hills are a special case. In Java Edition, the game code sets the values setBaseHeight and setHeightVariation to define a "hilly" biome, but uses the same values as for its non-hill variant (giant spruce taiga), meaning there is absolutely no terrain difference between the two biomes. In Bedrock Edition, this biome generates as a hillier version of the giant spruce taiga, but uses the same trees as the giant tree taiga hills (with leaves only at the top), resulting in the differences between these biomes being non-terrain aspects like water color and temperature. | Giant tree taiga hillsDesert hillsJungle hillsSnowy mountains |
-| Badlands Plateau                 |                                                                                                                                       | Badlands plateaus generate as actual biomes in badlands biomes, and are flattened at the top, much like real-life plateaus. They come to rest at an elevation of about 20 to 30 blocks above sea level. One may discover the entrance to a mineshaft within the tall slopes of a badlands plateau.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            | Badlands plateau                                              |
+| Badlands Plateau                 |                                                                                                                                       | Badlands plateaus generate as actual biomes in badlands biomes, and are flattened at the top, much like real-life plateaus. They come to rest at an elevation of about 20 to 30 blocks above sea level. One may discover the entrance to a mineshaft within the tall slopes of a badlands plateau.<br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Badlands plateau                                              |
 | Modified Plateaus                |                                                                                                                                       | Two rare variants of the plateau biomes, which are variants themselves. However, neither of these biomes closely resemble their counterparts.Compared to the average badlands plateau, the modified badlands plateau features more variable terrain and smaller plateaus, as if a larger plateau was weathered down over time. It is the second-rarest biome in the game, after the modified jungle edge.The terrain of the shattered savanna plateau biome is much less tame than its normal counterpart. It features incredibly large and steep mountains that jut out of the terrain, similar to the shattered savanna biome, albeit slightly smaller and gentler in comparison.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           | Modified badlands plateauShattered savanna plateau            |
 | Modified Wooded Badlands Plateau | Oak trees, dead bushes, coarse dirt, dirt, terracotta                                                                                 | This biome features grass and oak trees on top of plateaus, much like its counterpart. However, the plateaus that generate here are generally smaller, allowing far less foliage to generate. The terrain is more erratic, and can be compared to that of the similar modified badlands plateau biome, having an old and eroded appearance. Eroded badlands generate instead of desert alongside this biome.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Modified wooded badlands plateau                              |
 | Mushroom Field Shore             | Mushrooms, huge mushrooms, mycelium, mooshrooms, buried treasure, shipwrecks                                                          | Mushroom field shores represent the transition between mushroom fields and the ocean, forming long strips between the biomes as a "beach", hence the name. However, it does not generate if the ocean biome is a deep ocean. This biome also generates when a river meets a mushroom fields biome, similar to what frozen rivers do in snowy plains. The terrain of this biome is much more flat and shallow than the main mushroom fields biome, though it contains many of the same features, such as a mycelium surface layer, huge mushrooms and lack of hostile mobs, but shipwrecks and buried treasure can generate here.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Mushroom Field Shore                                          |
@@ -237,18 +237,18 @@ Please help expand and improve it. The talk page may contain suggestions.
 
 These biomes can only appear in april fools snapshots of the game.
 
-| Biome name                                 | Features                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     | Screenshot                                                                                                                   |
-|--------------------------------------------|-----------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
-| _generated:id                              | All mobs, blocks, particles and structures in 20w14a                                                | The_generated:idname is composed of two parts:_generated: and the dimension id. For example, the id for the "bridges" dimension is "1113696725"This "biome" generate all the other non-custom dimensions biomes. It isn't a biome, it's all the biomes that generate in those non-custom dimensions. All mobs, blocks, particles and structures in 20w14a (vanilla) can generate in this biome. A dimension can have multiple biomes. [needs testing]                                                                                                           | A randomly generated dimension                                                                                               |
-| Arboretum                                  | All types of trees, includingpotato trees, huge mushrooms, park lanes,potato villages               | A forested biome, with every type of tree added to Minecraft thus far. Non-uniform foliage color and trees generating very close to each other distinguish this biome from other forest-type biomes. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                              | Arboretum                                                                                                                    |
-| Between                                    | End ships                                                                                           | Grid of end ships. Generates in thefleetdimension as well as some other random ones. There is no elytra as loot, but dragon heads still generate. Chests generate, but contain only a book titled "orders" written by a mess of changing letters. The contents have at least one word, usually an order (eg: build), a mess of constantly changing letters with varying lengths and another word(s) (eg: Lost Floppy). The examples shown is an actually generated example, which gives a badlands biome with strange colours and concrete caves and many mobs. | A between biome generated in a buffet world.                                                                                 |
-| Biome For Player With No Time For Nonsense |                                                                                                     | Generates as a normal snowy taiga, but all ores are mineral blocks or redstone components.                                                                                                                                                                                                                                                                                                                                                                                                                                                                      | Biome for player with no time for nonsense, generated in the "busy" dimension. A redstone block can be seen on the mountain. |
-| Corruption                                 | Potato trees,potato buds,potato villages                                                            | A forested biome, covered in potato trees of various sized, as well as potato buds, that grow upward like stalagmites. Phantoms here spawn naturally during the day and they don't burn. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                          | Corruption                                                                                                                   |
-| Fields                                     | Fields ofpotatoes,potato villages                                                                   | Large percent of the surface is covered withpoison farmland, and potatoes grow on top of it. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                                                                                                                      | Fields                                                                                                                       |
-| Hash                                       | Hash wells, venomous columns                                                                        | A dry biome, with almost no vegetation. Only biome wheregravtaterandvicious potatoesoccur naturally. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                                                                                                              | Hash                                                                                                                         |
-| The Moon                                   | Moon cow,lunar base,cheese                                                                          | Generates flat terrain with craters made of blocks that can be "eaten" to change their shape. The only mob that spawns here is the moon cow. There is also the Lunar Base that can be expanded by stepping on the pressure plate, the onlyfeaturein the moon.                                                                                                                                                                                                                                                                                                   | The moon                                                                                                                     |
-| Shapes                                     | Terracotta,glazed terracotta,concrete,concrete powder,wool,carpets,stained glass,stained glass pane | Generates spheres, cubes, octahedra etc. of various colors and materials.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Shapes biome                                                                                                                 |
-| Wasteland                                  | Poisonous water and rain, columns ofancient debris,toxifin slabs                                    | A desolate and dangerous biome. All water and rain applies thePoisoneffect to players. Toxifin slabs spawn in large numbers, causing more Poison andWither. Ancient debris is common in this biome. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                               | Wasteland                                                                                                                    |
+| Biome name                                 | Features                                                                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Screenshot                                                                                                                   |
+|--------------------------------------------|-----------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------|
+| _generated:id                              | All mobs, blocks, particles and structures in 20w14a                                                | The_generated:idname is composed of two parts:_generated:<br/>and the dimension id. For example, the id for the "bridges" dimension is "1113696725"<br/>This "biome" generate all the other non-custom dimensions biomes. It isn't a biome, it's all the biomes that generate in those non-custom dimensions. All mobs, blocks, particles and structures in 20w14a (vanilla) can generate in this biome. A dimension can have multiple biomes. [needs testing]                                                                                                    | A randomly generated dimension                                                                                               |
+| Arboretum                                  | All types of trees, includingpotato trees, huge mushrooms, park lanes,potato villages               | A forested biome, with every type of tree added to Minecraft thus far. Non-uniform foliage color and trees generating very close to each other distinguish this biome from other forest-type biomes. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                | Arboretum                                                                                                                    |
+| Between                                    | End ships                                                                                           | Grid of end ships. Generates in the`fleet`dimension as well as some other random ones. There is no elytra as loot, but dragon heads still generate. Chests generate, but contain only a book titled "orders" written by a mess of changing letters. The contents have at least one word, usually an order (eg: build), a mess of constantly changing letters with varying lengths and another word(s) (eg: Lost Floppy). The examples shown is an actually generated example, which gives a badlands biome with strange colours and concrete caves and many mobs. | A between biome generated in a buffet world.                                                                                 |
+| Biome For Player With No Time For Nonsense |                                                                                                     | Generates as a normal snowy taiga, but all ores are mineral blocks or redstone components.                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Biome for player with no time for nonsense, generated in the "busy" dimension. A redstone block can be seen on the mountain. |
+| Corruption                                 | Potato trees,potato buds,potato villages                                                            | A forested biome, covered in potato trees of various sized, as well as potato buds, that grow upward like stalagmites. Phantoms here spawn naturally during the day and they don't burn. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                            | Corruption                                                                                                                   |
+| Fields                                     | Fields ofpotatoes,potato villages                                                                   | Large percent of the surface is covered withpoison farmland, and potatoes grow on top of it. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                                                                                                                        | Fields                                                                                                                       |
+| Hash                                       | Hash wells, venomous columns                                                                        | A dry biome, with almost no vegetation. Only biome wheregravtaterandvicious potatoesoccur naturally. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                                                                                                                | Hash                                                                                                                         |
+| The Moon                                   | Moon cow,lunar base,cheese                                                                          | Generates flat terrain with craters made of blocks that can be "eaten" to change their shape. The only mob that spawns here is the moon cow. There is also the Lunar Base that can be expanded by stepping on the pressure plate, the onlyfeaturein the moon.                                                                                                                                                                                                                                                                                                     | The moon                                                                                                                     |
+| Shapes                                     | Terracotta,glazed terracotta,concrete,concrete powder,wool,carpets,stained glass,stained glass pane | Generates spheres, cubes, octahedra etc. of various colors and materials.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         | Shapes biome                                                                                                                 |
+| Wasteland                                  | Poisonous water and rain, columns ofancient debris,toxifin slabs                                    | A desolate and dangerous biome. All water and rain applies thePoisoneffect to players. Toxifin slabs spawn in large numbers, causing more Poison andWither. Ancient debris is common in this biome. Generates inPotato dimension.                                                                                                                                                                                                                                                                                                                                 | Wasteland                                                                                                                    |
 
 ## Tint
 ### Plants
@@ -309,141 +309,141 @@ The precipitation value can be "true" or "false". If the precipitation of the bi
 
 So, if the base temperature is not greater than 0.15, it's snowable at any Y level. And if greater than 0.15, it can snow above a certain Y level, which are listed below:
 
-| Biomes                                                                                                                                            | Minimum height for snowfall |
-|---------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
-| Windswept HillsWindswept Gravelly HillsWindswept ForestStony Shore[1]Dripstone Caves‌[BE  only][2]Some regions ofFrozen OceanandDeep Frozen Ocean | 120±8                       |
-| Old Growth Spruce TaigaTaiga                                                                                                                      | 160±8                       |
-| Old Growth Pine TaigaMeadow‌[BE  only]Cherry Grove‌[BE  only]                                                                                     | 200±8                       |
-| Others                                                                                                                                            | Out of world                |
+| Biomes                                                                                                                                                                     | Minimum height for snowfall |
+|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------|
+| Windswept Hills<br/>Windswept Gravelly Hills<br/>Windswept Forest<br/>Stony Shore[1]<br/>Dripstone Caves‌[BE  only][2]<br/>Some regions ofFrozen OceanandDeep Frozen Ocean | 120±8                       |
+| Old Growth Spruce Taiga<br/>Taiga                                                                                                                                          | 160±8                       |
+| Old Growth Pine Taiga<br/>Meadow‌[BE  only]<br/>Cherry Grove‌[BE  only]                                                                                                    | 200±8                       |
+| Others                                                                                                                                                                     | Out of world                |
 
 ### Snow accumulation
 In Java Edition, the maximum snow accumulation layer can be set by snowAccumulationHeight game rules. In Bedrock Edition, the maximum snow layer is based on the snow accumulation value of the biome. The value is an array of 2 numbers, representing the minimum and maximum snow heights, with 0.0 being no snow and 1.0 being the full height of one block.
 
 ### List of biome climates
 #### Overworld
-| Biomes              | Base temperature | Downfall          | Precipitation            | Snow accumulation‌[BE  only] | Grass color    | Leaf color         | Sky color          | Fog color                            |
-|---------------------|------------------|-------------------|--------------------------|------------------------------|----------------|--------------------|--------------------|--------------------------------------|
-| The Void‌[JE  only] | 0.5              | 0.5               | FALSE                    | N/A                          | #8eb971        | #71a74d            | #7ba4ff            | #c0d8ff‌[JE  only]#abd2ff‌[BE  only] |
-|                     |                  |                   |                          |                              |                | Warm Ocean         | TRUE               | 0.0-0.125                            |
-|                     |                  |                   |                          |                              |                |                    |                    | Lukewarm Ocean                       |
-|                     |                  |                   |                          |                              |                |                    |                    | Deep Lukewarm Ocean                  |
-|                     |                  |                   |                          |                              |                |                    |                    | Ocean                                |
-|                     |                  |                   |                          |                              |                |                    |                    | Deep Ocean                           |
-|                     |                  |                   |                          |                              |                |                    |                    | Cold Ocean                           |
-|                     |                  |                   |                          |                              |                |                    |                    | Deep Cold Ocean                      |
-|                     |                  |                   |                          |                              |                |                    |                    | River                                |
-|                     |                  | Deep Frozen Ocean | 0.5‌[JE  only]           | 0.5                          | 0.125-0.25     | #8eb971‌[JE  only] | #71a74d‌[JE  only] | #7ba4ff‌[JE  only]                   |
-|                     |                  |                   |                          |                              | 0.0‌[BE  only] | #80b497‌[BE  only] | #60a17b‌[BE  only] | #7fa1ff‌[BE  only]                   |
-|                     |                  | Lush Caves        | 0.5‌[JE  only]           | 0.5‌[JE  only]               | 0.0-0.125      | #8eb971‌[JE  only] | #71a74d‌[JE  only] | #7ba4ff‌[JE  only]                   |
-|                     |                  |                   |                          | 0.9‌[BE  only]               | 0.0‌[BE  only] | #b9b75b‌[BE  only] | #a6a432‌[BE  only] | #77a8ff‌[BE  only]                   |
-|                     |                  |                   | Plains                   | 0.8                          | 0.4            | #91bd59            | #77ab2f            | #78a7ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Beach                                |
-|                     |                  |                   |                          |                              |                |                    |                    | Sunflower Plains                     |
-|                     |                  |                   |                          |                              |                |                    |                    | Deep Dark                            |
-|                     |                  |                   | Dripstone Caves          | 0.8‌[JE  only]               | 0.4‌[JE  only] | #91bd59‌[JE  only] | #77ab2f‌[JE  only] | #78a7ff‌[JE  only]                   |
-|                     |                  |                   |                          | 0.2‌[BE  only]               | 0.0‌[BE  only] | #8db58a‌[BE  only] | #70a26c‌[BE  only] | #7da2ff‌[BE  only]                   |
-|                     |                  | Frozen River      | 0.0                      | 0.5                          | 0.125-0.25     | #80b497            | #60a17b            | #7fa1ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Frozen Ocean                         |
-|                     |                  |                   |                          |                              |                |                    | Snowy Plains       | 0.25-1.0                             |
-|                     |                  |                   |                          |                              |                | Ice Spikes         | 0.5‌[JE  only]     | 0.5-1.5                              |
-|                     |                  |                   |                          |                              |                |                    |                    | 1.0‌[BE  only]                       |
-|                     |                  |                   |                          | Grove                        | -0.2           | 0.8                | 0.125-0.25         | #81a0ff                              |
-|                     |                  |                   |                          |                              | Frozen Peaks   | -0.7               | 0.9                | #859dff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Jagged Peaks                         |
-|                     |                  |                   |                          | Snowy Slopes                 | -0.3           | 0.9                | 0.125-0.5          | #829fff                              |
-|                     |                  |                   |                          |                              | Snowy Taiga    | -0.5               | 0.4                | #839eff                              |
-|                     |                  | Snowy Beach       | 0.05                     | 0.3                          | 0.125-0.25     | #83b593            | #64a278            | #7fa1ff                              |
-|                     |                  | Meadow            | 0.5‌[JE  only]           | 0.8                          | 0.0-0.125      | #83bb6d‌[JE  only] | #63a948‌[JE  only] | #7ba4ff‌[JE  only]                   |
-|                     |                  |                   |                          |                              | 0.3‌[BE  only] | #86b87f‌[BE  only] | #68a55f‌[BE  only] | #7ca3ff‌[BE  only]                   |
-|                     |                  |                   |                          | Cherry Grove                 | 0.5‌[JE  only] | #b6db61            | #b6db61            | #7ba4ff‌[JE  only]                   |
-|                     |                  |                   |                          |                              |                |                    | 0.3‌[BE  only]     | #7ca3ff‌[BE  only]                   |
-|                     |                  | Desert            | 2.0                      | 0.0                          | FALSE          | #bfb755            | #aea42a            | #6eb1ff                              |
-|                     |                  |                   |                          |                              |                | Savanna            | 2.0‌[JE  only]     | #6eb1ff‌[JE  only]                   |
-|                     |                  |                   |                          |                              |                |                    |                    | Savanna Plateau                      |
-|                     |                  |                   |                          |                              |                | Savanna            | 1.2‌[BE  only]     | #75aaff‌[BE  only]                   |
-|                     |                  |                   |                          |                              |                | Savanna Plateau    | 1.0‌[BE  only]     | #76a8ff‌[BE  only]                   |
-|                     |                  |                   | Windswept Savanna        | 2.0                          | 0.0            | #bfb755            | #aea42a            | #6eb1ff‌[JE  only]                   |
-|                     |                  |                   |                          |                              |                |                    |                    | #76a9ff‌[BE  only]                   |
-|                     |                  |                   | Badlands                 | 2.0                          | 0.0            | #90814d            | #9e814d            | #6eb1ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Wooded Badlands                      |
-|                     |                  |                   |                          |                              |                |                    |                    | Eroded Badlands                      |
-|                     |                  | Forest            | 0.7                      | 0.8                          | TRUE           | #79c05a            | #59ae30            | #79a6ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Flower Forest                        |
-|                     |                  |                   |                          |                              |                |                    | Dark Forest        | #507a32                              |
-|                     |                  |                   | Birch Forest             | 0.6                          | 0.6            | #88bb67            | #6ba941            | #7aa5ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Old Growth Birch Forest              |
-|                     |                  |                   | Old Growth Pine Taiga    | 0.3                          | 0.8            | #86b87f            | #68a55f            | #7ca3ff                              |
-|                     |                  |                   | Old Growth Spruce Taiga  | 0.25                         | 0.8            | #86b783            | #68a464            | #7da3ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Taiga                                |
-|                     |                  |                   | Windswept Gravelly Hills | 0.2                          | 0.3            | #8ab689            | #6da36b            | #7da2ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Windswept Forest                     |
-|                     |                  |                   |                          |                              |                |                    | Windswept Hills    | 0.0-0.25                             |
-|                     |                  |                   |                          |                              |                |                    |                    | Stony Shore                          |
-|                     |                  | Jungle            | 0.95                     | 0.9                          | 0.0-0.125      | #59c93c            | #30bb0b            | #77a8ff                              |
-|                     |                  |                   |                          |                              |                |                    |                    | Bamboo Jungle                        |
-|                     |                  |                   |                          |                              | Sparse Jungle  | 0.8                | #64c73f            | #3eb80f                              |
-|                     |                  |                   |                          | Mushroom Fields              | 0.9            | 1.0                | #55c93f            | #2bbb0f                              |
-|                     |                  |                   | Stony Peaks              | 1.0                          | 0.3            | #9abe4b            | #82ac1e            | #76a8ff                              |
-|                     |                  |                   | Mangrove Swamp           | 0.8                          | 0.9            | #6a7039#4c763c     | #6a7039            | #78a7ff                              |
-|                     |                  |                   |                          |                              |                | Swamp              | 0.9‌[JE  only]     | #8db127                              |
-|                     |                  |                   |                          |                              |                |                    |                    | 0.5‌[BE  only]                       |
+| Biomes                   | Base temperature | Downfall       | Precipitation | Snow accumulation‌[BE  only] | Grass color         | Leaf color         | Sky color          | Fog color                                 |
+|--------------------------|------------------|----------------|---------------|------------------------------|---------------------|--------------------|--------------------|-------------------------------------------|
+| The Void‌[JE  only]      | 0.5              | 0.5            | FALSE         | N/A                          | #8eb971             | #71a74d            | #7ba4ff            | #c0d8ff‌[JE  only]<br/>#abd2ff‌[BE  only] |
+| Warm Ocean               |                  |                | TRUE          | 0.0-0.125                    |                     |                    |                    |                                           |
+| Lukewarm Ocean           |                  |                |               |                              |                     |                    |                    |                                           |
+| Deep Lukewarm Ocean      |                  |                |               |                              |                     |                    |                    |                                           |
+| Ocean                    |                  |                |               |                              |                     |                    |                    |                                           |
+| Deep Ocean               |                  |                |               |                              |                     |                    |                    |                                           |
+| Cold Ocean               |                  |                |               |                              |                     |                    |                    |                                           |
+| Deep Cold Ocean          |                  |                |               |                              |                     |                    |                    |                                           |
+| River                    |                  |                |               |                              |                     |                    |                    |                                           |
+| Deep Frozen Ocean        | 0.5‌[JE  only]   | 0.5            |               | 0.125-0.25                   | #8eb971‌[JE  only]  | #71a74d‌[JE  only] | #7ba4ff‌[JE  only] |                                           |
+|                          | 0.0‌[BE  only]   |                |               |                              | #80b497‌[BE  only]  | #60a17b‌[BE  only] | #7fa1ff‌[BE  only] |                                           |
+| Lush Caves               | 0.5‌[JE  only]   | 0.5‌[JE  only] |               | 0.0-0.125                    | #8eb971‌[JE  only]  | #71a74d‌[JE  only] | #7ba4ff‌[JE  only] |                                           |
+|                          | 0.9‌[BE  only]   | 0.0‌[BE  only] |               |                              | #b9b75b‌[BE  only]  | #a6a432‌[BE  only] | #77a8ff‌[BE  only] |                                           |
+| Plains                   | 0.8              | 0.4            |               |                              | #91bd59             | #77ab2f            | #78a7ff            |                                           |
+| Beach                    |                  |                |               |                              |                     |                    |                    |                                           |
+| Sunflower Plains         |                  |                |               |                              |                     |                    |                    |                                           |
+| Deep Dark                |                  |                |               |                              |                     |                    |                    |                                           |
+| Dripstone Caves          | 0.8‌[JE  only]   | 0.4‌[JE  only] |               |                              | #91bd59‌[JE  only]  | #77ab2f‌[JE  only] | #78a7ff‌[JE  only] |                                           |
+|                          | 0.2‌[BE  only]   | 0.0‌[BE  only] |               |                              | #8db58a‌[BE  only]  | #70a26c‌[BE  only] | #7da2ff‌[BE  only] |                                           |
+| Frozen River             | 0.0              | 0.5            |               | 0.125-0.25                   | #80b497             | #60a17b            | #7fa1ff            |                                           |
+| Frozen Ocean             |                  |                |               |                              |                     |                    |                    |                                           |
+| Snowy Plains             |                  |                |               | 0.25-1.0                     |                     |                    |                    |                                           |
+| Ice Spikes               |                  | 0.5‌[JE  only] |               | 0.5-1.5                      |                     |                    |                    |                                           |
+|                          |                  | 1.0‌[BE  only] |               |                              |                     |                    |                    |                                           |
+| Grove                    | -0.2             | 0.8            |               | 0.125-0.25                   |                     |                    | #81a0ff            |                                           |
+| Frozen Peaks             | -0.7             | 0.9            |               |                              |                     |                    | #859dff            |                                           |
+| Jagged Peaks             |                  |                |               |                              |                     |                    |                    |                                           |
+| Snowy Slopes             | -0.3             | 0.9            |               | 0.125-0.5                    |                     |                    | #829fff            |                                           |
+| Snowy Taiga              | -0.5             | 0.4            |               |                              |                     |                    | #839eff            |                                           |
+| Snowy Beach              | 0.05             | 0.3            |               | 0.125-0.25                   | #83b593             | #64a278            | #7fa1ff            |                                           |
+| Meadow                   | 0.5‌[JE  only]   | 0.8            |               | 0.0-0.125                    | #83bb6d‌[JE  only]  | #63a948‌[JE  only] | #7ba4ff‌[JE  only] |                                           |
+|                          | 0.3‌[BE  only]   |                |               |                              | #86b87f‌[BE  only]  | #68a55f‌[BE  only] | #7ca3ff‌[BE  only] |                                           |
+| Cherry Grove             | 0.5‌[JE  only]   |                |               |                              | #b6db61             | #b6db61            | #7ba4ff‌[JE  only] |                                           |
+|                          | 0.3‌[BE  only]   |                |               |                              |                     |                    | #7ca3ff‌[BE  only] |                                           |
+| Desert                   | 2.0              | 0.0            | FALSE         |                              | #bfb755             | #aea42a            | #6eb1ff            |                                           |
+| Savanna                  | 2.0‌[JE  only]   |                |               |                              |                     |                    | #6eb1ff‌[JE  only] |                                           |
+| Savanna Plateau          |                  |                |               |                              |                     |                    |                    |                                           |
+| Savanna                  | 1.2‌[BE  only]   |                |               |                              |                     |                    | #75aaff‌[BE  only] |                                           |
+| Savanna Plateau          | 1.0‌[BE  only]   |                |               |                              |                     |                    | #76a8ff‌[BE  only] |                                           |
+| Windswept Savanna        | 2.0              | 0.0            |               |                              | #bfb755             | #aea42a            | #6eb1ff‌[JE  only] |                                           |
+|                          |                  |                |               |                              |                     |                    | #76a9ff‌[BE  only] |                                           |
+| Badlands                 | 2.0              | 0.0            |               |                              | #90814d             | #9e814d            | #6eb1ff            |                                           |
+| Wooded Badlands          |                  |                |               |                              |                     |                    |                    |                                           |
+| Eroded Badlands          |                  |                |               |                              |                     |                    |                    |                                           |
+| Forest                   | 0.7              | 0.8            | TRUE          |                              | #79c05a             | #59ae30            | #79a6ff            |                                           |
+| Flower Forest            |                  |                |               |                              |                     |                    |                    |                                           |
+| Dark Forest              |                  |                |               |                              | #507a32             |                    |                    |                                           |
+| Birch Forest             | 0.6              | 0.6            |               |                              | #88bb67             | #6ba941            | #7aa5ff            |                                           |
+| Old Growth Birch Forest  |                  |                |               |                              |                     |                    |                    |                                           |
+| Old Growth Pine Taiga    | 0.3              | 0.8            |               |                              | #86b87f             | #68a55f            | #7ca3ff            |                                           |
+| Old Growth Spruce Taiga  | 0.25             | 0.8            |               |                              | #86b783             | #68a464            | #7da3ff            |                                           |
+| Taiga                    |                  |                |               |                              |                     |                    |                    |                                           |
+| Windswept Gravelly Hills | 0.2              | 0.3            |               |                              | #8ab689             | #6da36b            | #7da2ff            |                                           |
+| Windswept Forest         |                  |                |               |                              |                     |                    |                    |                                           |
+| Windswept Hills          |                  |                |               | 0.0-0.25                     |                     |                    |                    |                                           |
+| Stony Shore              |                  |                |               |                              |                     |                    |                    |                                           |
+| Jungle                   | 0.95             | 0.9            |               | 0.0-0.125                    | #59c93c             | #30bb0b            | #77a8ff            |                                           |
+| Bamboo Jungle            |                  |                |               |                              |                     |                    |                    |                                           |
+| Sparse Jungle            |                  | 0.8            |               |                              | #64c73f             | #3eb80f            |                    |                                           |
+| Mushroom Fields          | 0.9              | 1.0            |               |                              | #55c93f             | #2bbb0f            |                    |                                           |
+| Stony Peaks              | 1.0              | 0.3            |               |                              | #9abe4b             | #82ac1e            | #76a8ff            |                                           |
+| Mangrove Swamp           | 0.8              | 0.9            |               |                              | #6a7039<br/>#4c763c | #6a7039            | #78a7ff            |                                           |
+| Swamp                    |                  | 0.9‌[JE  only] |               |                              |                     | #8db127            |                    |                                           |
+|                          |                  | 0.5‌[BE  only] |               |                              |                     |                    |                    |                                           |
 
-| Biome          | Water color in Bedrock Edition | Water fog color in Bedrock Edition                                                                           | Water color in Java Edition | Water fog color in Java Edition |
-|----------------|--------------------------------|--------------------------------------------------------------------------------------------------------------|-----------------------------|---------------------------------|
-| Swamp          | #617b64                        | #232317                                                                                                      | #4c6559                     | #4c6559                         |
-| Mangrove Swamp | #3a7a6a                        | #4d7a60                                                                                                      | #3a7a6a                     | #4d7a60                         |
-| Warm Ocean     | #02b0e5                        | #0289d5                                                                                                      | #43d5ee                     | #041f33                         |
-| Lukewarm Ocean | #0d96db                        | #0a74c4                                                                                                      | #45adf2                     | #041633                         |
-|                |                                |                                                                                                              | Deep Lukewarm Ocean         | #0e72b9                         |
-| Cold Ocean     | #2080c9                        | #14559b                                                                                                      | #3d57d6                     | #050533                         |
-|                |                                |                                                                                                              | Deep Cold Ocean             | #185390                         |
-|                |                                | Snowy Beach                                                                                                  | #1463a5                     | #1463a5                         |
-|                |                                | Snowy Taiga                                                                                                  | #205e83                     | #205e83                         |
-|                | Frozen Ocean                   | #2570b5                                                                                                      | #174985                     | #3938c9                         |
-|                |                                |                                                                                                              | Deep Frozen Ocean           | #1a4879                         |
-|                |                                | Frozen River                                                                                                 | #185390                     | #185390                         |
-|                | Meadow                         | #44aff5                                                                                                      | #44aff5                     | #0e4ecf                         |
-|                | Cherry Grove                   | #5db7ef                                                                                                      | #5db7ef                     | #5db7ef                         |
-|                | Ocean                          | #1787d4                                                                                                      | #1165b0                     | #3f76e4                         |
-|                |                                |                                                                                                              | Deep Ocean                  | #1463a5                         |
-|                |                                | River                                                                                                        | #0084ff                     | #0084ff                         |
-|                |                                | Beach                                                                                                        | #157cab                     | #157cab                         |
-|                |                                | Stony Shore                                                                                                  | #0d67bb                     | #0d67bb                         |
-|                |                                | Snowy PlainsIce Spikes                                                                                       | #14559b                     | #14559b                         |
-|                |                                | Taiga                                                                                                        | #287082                     | #287082                         |
-|                |                                | Old Growth Pine TaigaOld Growth Spruce Taiga                                                                 | #2d6d77                     | #2d6d77                         |
-|                |                                | Dark Forest                                                                                                  | #3b6cd1                     | #3b6cd1                         |
-|                |                                | Flower Forest                                                                                                | #20a3cc                     | #20a3cc                         |
-|                |                                | Forest                                                                                                       | #1e97f2                     | #1e97f2                         |
-|                |                                | Birch Forest                                                                                                 | #0677ce                     | #0677ce                         |
-|                |                                | Old Growth Birch Forest                                                                                      | #0a74c4                     | #0a74c4                         |
-|                |                                | Bamboo JungleJungle                                                                                          | #14a2c5                     | #14a2c5                         |
-|                |                                | Sparse Jungle                                                                                                | #0d8ae3                     | #0d8ae3                         |
-|                |                                | Savanna                                                                                                      | #2c8b9c                     | #2c8b9c                         |
-|                |                                | Windswept SavannaSavanna Plateau                                                                             | #2590a8                     | #2590a8                         |
-|                |                                | Desert                                                                                                       | #32a598                     | #32a598                         |
-|                |                                | Badlands                                                                                                     | #4e7f81                     | #4e7f81                         |
-|                |                                | Eroded Badlands                                                                                              | #497f99                     | #497f99                         |
-|                |                                | Mushroom Fields                                                                                              | #8a8997                     | #8a8997                         |
-|                |                                | Wooded Badlands                                                                                              | #55809e                     | #55809e                         |
-|                |                                | Windswept ForestWindswept Gravelly Hills                                                                     | #0e63ab                     | #0e63ab                         |
-|                |                                | Windswept Hills                                                                                              | #007bf7                     | #007bf7                         |
-|                |                                | Dripstone CavesDeep DarkLush CavesFrozen PeaksJagged PeaksStony PeaksPlainsSunflower PlainsGroveSnowy Slopes | #44aff5                     | #44aff5                         |
-|                |                                | The Void‌[JE  only]                                                                                          | N/A                         | N/A                             |
+| Biome                                                                                                                                                     | Water color in Bedrock Edition | Water fog color in Bedrock Edition | Water color in Java Edition | Water fog color in Java Edition |
+|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------|------------------------------------|-----------------------------|---------------------------------|
+| Swamp                                                                                                                                                     | #617b64                        | #232317                            | #4c6559                     | #4c6559                         |
+| Mangrove Swamp                                                                                                                                            | #3a7a6a                        | #4d7a60                            | #3a7a6a                     | #4d7a60                         |
+| Warm Ocean                                                                                                                                                | #02b0e5                        | #0289d5                            | #43d5ee                     | #041f33                         |
+| Lukewarm Ocean                                                                                                                                            | #0d96db                        | #0a74c4                            | #45adf2                     | #041633                         |
+| Deep Lukewarm Ocean                                                                                                                                       |                                | #0e72b9                            |                             |                                 |
+| Cold Ocean                                                                                                                                                | #2080c9                        | #14559b                            | #3d57d6                     | #050533                         |
+| Deep Cold Ocean                                                                                                                                           |                                | #185390                            |                             |                                 |
+| Snowy Beach                                                                                                                                               | #1463a5                        | #1463a5                            |                             |                                 |
+| Snowy Taiga                                                                                                                                               | #205e83                        | #205e83                            |                             |                                 |
+| Frozen Ocean                                                                                                                                              | #2570b5                        | #174985                            | #3938c9                     |                                 |
+| Deep Frozen Ocean                                                                                                                                         |                                | #1a4879                            |                             |                                 |
+| Frozen River                                                                                                                                              | #185390                        | #185390                            |                             |                                 |
+| Meadow                                                                                                                                                    | #44aff5                        | #44aff5                            | #0e4ecf                     |                                 |
+| Cherry Grove                                                                                                                                              | #5db7ef                        | #5db7ef                            | #5db7ef                     |                                 |
+| Ocean                                                                                                                                                     | #1787d4                        | #1165b0                            | #3f76e4                     |                                 |
+| Deep Ocean                                                                                                                                                |                                | #1463a5                            |                             |                                 |
+| River                                                                                                                                                     | #0084ff                        | #0084ff                            |                             |                                 |
+| Beach                                                                                                                                                     | #157cab                        | #157cab                            |                             |                                 |
+| Stony Shore                                                                                                                                               | #0d67bb                        | #0d67bb                            |                             |                                 |
+| Snowy Plains<br/>Ice Spikes                                                                                                                               | #14559b                        | #14559b                            |                             |                                 |
+| Taiga                                                                                                                                                     | #287082                        | #287082                            |                             |                                 |
+| Old Growth Pine Taiga<br/>Old Growth Spruce Taiga                                                                                                         | #2d6d77                        | #2d6d77                            |                             |                                 |
+| Dark Forest                                                                                                                                               | #3b6cd1                        | #3b6cd1                            |                             |                                 |
+| Flower Forest                                                                                                                                             | #20a3cc                        | #20a3cc                            |                             |                                 |
+| Forest                                                                                                                                                    | #1e97f2                        | #1e97f2                            |                             |                                 |
+| Birch Forest                                                                                                                                              | #0677ce                        | #0677ce                            |                             |                                 |
+| Old Growth Birch Forest                                                                                                                                   | #0a74c4                        | #0a74c4                            |                             |                                 |
+| Bamboo Jungle<br/>Jungle                                                                                                                                  | #14a2c5                        | #14a2c5                            |                             |                                 |
+| Sparse Jungle                                                                                                                                             | #0d8ae3                        | #0d8ae3                            |                             |                                 |
+| Savanna                                                                                                                                                   | #2c8b9c                        | #2c8b9c                            |                             |                                 |
+| Windswept Savanna<br/>Savanna Plateau                                                                                                                     | #2590a8                        | #2590a8                            |                             |                                 |
+| Desert                                                                                                                                                    | #32a598                        | #32a598                            |                             |                                 |
+| Badlands                                                                                                                                                  | #4e7f81                        | #4e7f81                            |                             |                                 |
+| Eroded Badlands                                                                                                                                           | #497f99                        | #497f99                            |                             |                                 |
+| Mushroom Fields                                                                                                                                           | #8a8997                        | #8a8997                            |                             |                                 |
+| Wooded Badlands                                                                                                                                           | #55809e                        | #55809e                            |                             |                                 |
+| Windswept Forest<br/>Windswept Gravelly Hills                                                                                                             | #0e63ab                        | #0e63ab                            |                             |                                 |
+| Windswept Hills                                                                                                                                           | #007bf7                        | #007bf7                            |                             |                                 |
+| Dripstone Caves<br/>Deep Dark<br/>Lush Caves<br/>Frozen Peaks<br/>Jagged Peaks<br/>Stony Peaks<br/>Plains<br/>Sunflower Plains<br/>Grove<br/>Snowy Slopes | #44aff5                        | #44aff5                            |                             |                                 |
+| The Void‌[JE  only]                                                                                                                                       | N/A                            | N/A                                |                             |                                 |
 
 #### The Nether
-| Biome         | Base temperature | Downfall | Precipitation | Grass color | Leaf color | Sky color     | Water color                          | Water fog color                      | Fog color |
-|---------------|------------------|----------|---------------|-------------|------------|---------------|--------------------------------------|--------------------------------------|-----------|
-| Nether Wastes | 2.0              | 0.0      | FALSE         | #bfb755     | #aea42a    | #6eb1ff       | #3f76e4‌[JE  only]#905957‌[BE  only] | #050533‌[JE  only]#905957‌[BE  only] | #330808   |
-|               |                  |          |               |             |            |               |                                      | Warped Forest                        | #1a051a   |
-|               |                  |          |               |             |            |               |                                      | Crimson Forest                       | #330303   |
-|               |                  |          |               |             |            |               |                                      | Soul Sand Valley                     | #1b4745   |
-|               |                  |          |               |             |            | Basalt Deltas | #3f76e4                              | #050533‌[JE  only]#423e42‌[BE  only] | #685f70   |
+| Biome            | Base temperature | Downfall | Precipitation | Grass color | Leaf color | Sky color | Water color                               | Water fog color                           | Fog color |
+|------------------|------------------|----------|---------------|-------------|------------|-----------|-------------------------------------------|-------------------------------------------|-----------|
+| Nether Wastes    | 2.0              | 0.0      | FALSE         | #bfb755     | #aea42a    | #6eb1ff   | #3f76e4‌[JE  only]<br/>#905957‌[BE  only] | #050533‌[JE  only]<br/>#905957‌[BE  only] | #330808   |
+| Warped Forest    |                  |          |               |             |            |           |                                           |                                           | #1a051a   |
+| Crimson Forest   |                  |          |               |             |            |           |                                           |                                           | #330303   |
+| Soul Sand Valley |                  |          |               |             |            |           |                                           |                                           | #1b4745   |
+| Basalt Deltas    |                  |          |               |             |            |           | #3f76e4                                   | #050533‌[JE  only]<br/>#423e42‌[BE  only] | #685f70   |
 
 #### The End
-| Biome                                                                                                    | Base temperature | Downfall | Precipitation | Grass color | Leaf color | Sky color | Water color                          | Water fog color                      | Fog color                            |
-|----------------------------------------------------------------------------------------------------------|------------------|----------|---------------|-------------|------------|-----------|--------------------------------------|--------------------------------------|--------------------------------------|
-| The EndEnd Highlands‌[JE  only]End Midlands‌[JE  only]Small End Islands‌[JE  only]End Barrens‌[JE  only] | 0.5              | 0.5      | FALSE         | #8eb971     | #71a74d    | #000000   | #3f76e4‌[JE  only]#62529e‌[BE  only] | #050533‌[JE  only]#62529e‌[BE  only] | #a080a0‌[JE  only]#0b080c‌[BE  only] |
+| Biome                                                                                                                        | Base temperature | Downfall | Precipitation | Grass color | Leaf color | Sky color | Water color                               | Water fog color                           | Fog color                                 |
+|------------------------------------------------------------------------------------------------------------------------------|------------------|----------|---------------|-------------|------------|-----------|-------------------------------------------|-------------------------------------------|-------------------------------------------|
+| The End<br/>End Highlands‌[JE  only]<br/>End Midlands‌[JE  only]<br/>Small End Islands‌[JE  only]<br/>End Barrens‌[JE  only] | 0.5              | 0.5      | FALSE         | #8eb971     | #71a74d    | #000000   | #3f76e4‌[JE  only]<br/>#62529e‌[BE  only] | #050533‌[JE  only]<br/>#62529e‌[BE  only] | #a080a0‌[JE  only]<br/>#0b080c‌[BE  only] |
 
 ## Generation
 Main article: World generation § Biomes
@@ -454,163 +454,163 @@ Each type of biome has its own biome ID, shown in the following tables.
 
 Java Edition:
 
-| Name                     | Resource location        | Numeric ID |
-|--------------------------|--------------------------|------------|
-| The Void                 | the_void                 | 0          |
-| Plains                   | plains                   | 1          |
-| Sunflower Plains         | sunflower_plains         | 2          |
-| Snowy Plains             | snowy_plains             | 3          |
-| Ice Spikes               | ice_spikes               | 4          |
-| Desert                   | desert                   | 5          |
-| Swamp                    | swamp                    | 6          |
-| Mangrove Swamp           | mangrove_swamp           | 7          |
-| Forest                   | forest                   | 8          |
-| Flower Forest            | flower_forest            | 9          |
-| Birch Forest             | birch_forest             | 10         |
-| Dark Forest              | dark_forest              | 11         |
-| Old Growth Birch Forest  | old_growth_birch_forest  | 12         |
-| Old Growth Pine Taiga    | old_growth_pine_taiga    | 13         |
-| Old Growth Spruce Taiga  | old_growth_spruce_taiga  | 14         |
-| Taiga                    | taiga                    | 15         |
-| Snowy Taiga              | snowy_taiga              | 16         |
-| Savanna                  | savanna                  | 17         |
-| Savanna Plateau          | savanna_plateau          | 18         |
-| Windswept Hills          | windswept_hills          | 19         |
-| Windswept Gravelly Hills | windswept_gravelly_hills | 20         |
-| Windswept Forest         | windswept_forest         | 21         |
-| Windswept Savanna        | windswept_savanna        | 22         |
-| Jungle                   | jungle                   | 23         |
-| Sparse Jungle            | sparse_jungle            | 24         |
-| Bamboo Jungle            | bamboo_jungle            | 25         |
-| Badlands                 | badlands                 | 26         |
-| Eroded Badlands          | eroded_badlands          | 27         |
-| Wooded Badlands          | wooded_badlands          | 28         |
-| Meadow                   | meadow                   | 29         |
-| Cherry Grove             | cherry_grove             | 30         |
-| Grove                    | grove                    | 31         |
-| Snowy Slopes             | snowy_slopes             | 32         |
-| Frozen Peaks             | frozen_peaks             | 33         |
-| Jagged Peaks             | jagged_peaks             | 34         |
-| Stony Peaks              | stony_peaks              | 35         |
-| River                    | river                    | 36         |
-| Frozen River             | frozen_river             | 37         |
-| Beach                    | beach                    | 38         |
-| Snowy Beach              | snowy_beach              | 39         |
-| Stony Shore              | stony_shore              | 40         |
-| Warm Ocean               | warm_ocean               | 41         |
-| Lukewarm Ocean           | lukewarm_ocean           | 42         |
-| Deep Lukewarm Ocean      | deep_lukewarm_ocean      | 43         |
-| Ocean                    | ocean                    | 44         |
-| Deep Ocean               | deep_ocean               | 45         |
-| Cold Ocean               | cold_ocean               | 46         |
-| Deep Cold Ocean          | deep_cold_ocean          | 47         |
-| Frozen Ocean             | frozen_ocean             | 48         |
-| Deep Frozen Ocean        | deep_frozen_ocean        | 49         |
-| Mushroom Fields          | mushroom_fields          | 50         |
-| Dripstone Caves          | dripstone_caves          | 51         |
-| Lush Caves               | lush_caves               | 52         |
-| Deep Dark                | deep_dark                | 53         |
-| Nether Wastes            | nether_wastes            | 54         |
-| Warped Forest            | warped_forest            | 55         |
-| Crimson Forest           | crimson_forest           | 56         |
-| Soul Sand Valley         | soul_sand_valley         | 57         |
-| Basalt Deltas            | basalt_deltas            | 58         |
-| The End                  | the_end                  | 59         |
-| End Highlands            | end_highlands            | 60         |
-| End Midlands             | end_midlands             | 61         |
-| Small End Islands        | small_end_islands        | 62         |
-| End Barrens              | end_barrens              | 63         |
+| Name                     | Resource location          | Numeric ID |
+|--------------------------|----------------------------|------------|
+| The Void                 | `the_void`                 | 0          |
+| Plains                   | `plains`                   | 1          |
+| Sunflower Plains         | `sunflower_plains`         | 2          |
+| Snowy Plains             | `snowy_plains`             | 3          |
+| Ice Spikes               | `ice_spikes`               | 4          |
+| Desert                   | `desert`                   | 5          |
+| Swamp                    | `swamp`                    | 6          |
+| Mangrove Swamp           | `mangrove_swamp`           | 7          |
+| Forest                   | `forest`                   | 8          |
+| Flower Forest            | `flower_forest`            | 9          |
+| Birch Forest             | `birch_forest`             | 10         |
+| Dark Forest              | `dark_forest`              | 11         |
+| Old Growth Birch Forest  | `old_growth_birch_forest`  | 12         |
+| Old Growth Pine Taiga    | `old_growth_pine_taiga`    | 13         |
+| Old Growth Spruce Taiga  | `old_growth_spruce_taiga`  | 14         |
+| Taiga                    | `taiga`                    | 15         |
+| Snowy Taiga              | `snowy_taiga`              | 16         |
+| Savanna                  | `savanna`                  | 17         |
+| Savanna Plateau          | `savanna_plateau`          | 18         |
+| Windswept Hills          | `windswept_hills`          | 19         |
+| Windswept Gravelly Hills | `windswept_gravelly_hills` | 20         |
+| Windswept Forest         | `windswept_forest`         | 21         |
+| Windswept Savanna        | `windswept_savanna`        | 22         |
+| Jungle                   | `jungle`                   | 23         |
+| Sparse Jungle            | `sparse_jungle`            | 24         |
+| Bamboo Jungle            | `bamboo_jungle`            | 25         |
+| Badlands                 | `badlands`                 | 26         |
+| Eroded Badlands          | `eroded_badlands`          | 27         |
+| Wooded Badlands          | `wooded_badlands`          | 28         |
+| Meadow                   | `meadow`                   | 29         |
+| Cherry Grove             | `cherry_grove`             | 30         |
+| Grove                    | `grove`                    | 31         |
+| Snowy Slopes             | `snowy_slopes`             | 32         |
+| Frozen Peaks             | `frozen_peaks`             | 33         |
+| Jagged Peaks             | `jagged_peaks`             | 34         |
+| Stony Peaks              | `stony_peaks`              | 35         |
+| River                    | `river`                    | 36         |
+| Frozen River             | `frozen_river`             | 37         |
+| Beach                    | `beach`                    | 38         |
+| Snowy Beach              | `snowy_beach`              | 39         |
+| Stony Shore              | `stony_shore`              | 40         |
+| Warm Ocean               | `warm_ocean`               | 41         |
+| Lukewarm Ocean           | `lukewarm_ocean`           | 42         |
+| Deep Lukewarm Ocean      | `deep_lukewarm_ocean`      | 43         |
+| Ocean                    | `ocean`                    | 44         |
+| Deep Ocean               | `deep_ocean`               | 45         |
+| Cold Ocean               | `cold_ocean`               | 46         |
+| Deep Cold Ocean          | `deep_cold_ocean`          | 47         |
+| Frozen Ocean             | `frozen_ocean`             | 48         |
+| Deep Frozen Ocean        | `deep_frozen_ocean`        | 49         |
+| Mushroom Fields          | `mushroom_fields`          | 50         |
+| Dripstone Caves          | `dripstone_caves`          | 51         |
+| Lush Caves               | `lush_caves`               | 52         |
+| Deep Dark                | `deep_dark`                | 53         |
+| Nether Wastes            | `nether_wastes`            | 54         |
+| Warped Forest            | `warped_forest`            | 55         |
+| Crimson Forest           | `crimson_forest`           | 56         |
+| Soul Sand Valley         | `soul_sand_valley`         | 57         |
+| Basalt Deltas            | `basalt_deltas`            | 58         |
+| The End                  | `the_end`                  | 59         |
+| End Highlands            | `end_highlands`            | 60         |
+| End Midlands             | `end_midlands`             | 61         |
+| Small End Islands        | `small_end_islands`        | 62         |
+| End Barrens              | `end_barrens`              | 63         |
 
 Bedrock Edition: 
 
-| Name                             | Resource location                | Numeric ID |
-|----------------------------------|----------------------------------|------------|
-| Ocean                            | ocean                            | 0          |
-| Legacy Frozen Ocean              | legacy_frozen_ocean              | 10         |
-| Deep Ocean                       | deep_ocean                       | 24         |
-| Frozen Ocean                     | frozen_ocean                     | 46         |
-| Deep Frozen Ocean                | deep_frozen_ocean                | 47         |
-| Cold Ocean                       | cold_ocean                       | 44         |
-| Deep Cold Ocean                  | deep_cold_ocean                  | 45         |
-| Lukewarm Ocean                   | lukewarm_ocean                   | 42         |
-| Deep Lukewarm Ocean              | deep_lukewarm_ocean              | 43         |
-| Warm Ocean                       | warm_ocean                       | 40         |
-| Deep Warm Ocean                  | deep_warm_ocean                  | 41         |
-| River                            | river                            | 7          |
-| Frozen River                     | frozen_river                     | 11         |
-| Beach                            | beach                            | 16         |
-| Stony Shore                      | stone_beach                      | 25         |
-| Snowy Beach                      | cold_beach                       | 26         |
-| Forest                           | forest                           | 4          |
-| Wooded Hills                     | forest_hills                     | 18         |
-| Flower Forest                    | flower_forest                    | 132        |
-| Birch Forest                     | birch_forest                     | 27         |
-| Birch Forest Hills               | birch_forest_hills               | 28         |
-| Old Growth Birch Forest          | birch_forest_mutated             | 155        |
-| Tall Birch Hills                 | birch_forest_hills_mutated       | 156        |
-| Dark Forest                      | roofed_forest                    | 29         |
-| Dark Forest Hills                | roofed_forest_mutated            | 157        |
-| Jungle                           | jungle                           | 21         |
-| Jungle Hills                     | jungle_hills                     | 22         |
-| Modified Jungle                  | jungle_mutated                   | 149        |
-| Sparse Jungle                    | jungle_edge                      | 23         |
-| Modified Jungle Edge             | jungle_edge_mutated              | 151        |
-| Bamboo Jungle                    | bamboo_jungle                    | 48         |
-| Bamboo Jungle Hills              | bamboo_jungle_hills              | 49         |
-| Taiga                            | taiga                            | 5          |
-| Taiga Hills                      | taiga_hills                      | 19         |
-| Taiga Mountains                  | taiga_mutated                    | 133        |
-| Snowy Taiga                      | cold_taiga                       | 30         |
-| Snowy Taiga Hills                | cold_taiga_hills                 | 31         |
-| Snowy Taiga Mountains            | cold_taiga_mutated               | 158        |
-| Old Growth Pine Taiga            | mega_taiga                       | 32         |
-| Giant Tree Taiga Hills           | mega_taiga_hills                 | 33         |
-| Old Growth Spruce Taiga          | redwood_taiga_mutated            | 160        |
-| Giant Spruce Taiga Hills         | redwood_taiga_hills_mutated      | 161        |
-| Mushroom Fields                  | mushroom_island                  | 14         |
-| Mushroom Field Shore             | mushroom_island_shore            | 15         |
-| Swamp                            | swampland                        | 6          |
-| Swamp Hills                      | swampland_mutated                | 134        |
-| Savanna                          | savanna                          | 35         |
-| Savanna Plateau                  | savanna_plateau                  | 36         |
-| Windswept Savanna                | savanna_mutated                  | 163        |
-| Shattered Savanna Plateau        | savanna_plateau_mutated          | 164        |
-| Plains                           | plains                           | 1          |
-| Sunflower Plains                 | sunflower_plains                 | 129        |
-| Desert                           | desert                           | 2          |
-| Desert Hills                     | desert_hills                     | 17         |
-| Desert Lakes                     | desert_mutated                   | 130        |
-| Snowy Plains                     | ice_plains                       | 12         |
-| Snowy Mountains                  | ice_mountains                    | 13         |
-| Ice Spikes                       | ice_plains_spikes                | 140        |
-| Windswept Hills                  | extreme_hills                    | 3          |
-| Windswept Forest                 | extreme_hills_plus_trees         | 34         |
-| Windswept Gravelly Hills         | extreme_hills_mutated            | 131        |
-| Gravelly Mountains+              | extreme_hills_plus_trees_mutated | 162        |
-| Mountain Edge                    | extreme_hills_edge               | 20         |
-| Badlands                         | mesa                             | 37         |
-| Badlands Plateau                 | mesa_plateau                     | 39         |
-| Modified Badlands Plateau        | mesa_plateau_mutated             | 167        |
-| Wooded Badlands                  | mesa_plateau_stone               | 38         |
-| Modified Wooded Badlands Plateau | mesa_plateau_stone_mutated       | 166        |
-| Eroded Badlands                  | mesa_bryce                       | 165        |
-| Meadow                           | meadow                           | 186        |
-| Grove                            | grove                            | 185        |
-| Snowy Slopes                     | snowy_slopes                     | 184        |
-| Jagged Peaks                     | jagged_peaks                     | 182        |
-| Frozen Peaks                     | frozen_peaks                     | 183        |
-| Stony Peaks                      | stony_peaks                      | 189        |
-| Lush Caves                       | lush_caves                       | 187        |
-| Dripstone Caves                  | dripstone_caves                  | 188        |
-| Deep Dark                        | deep_dark                        | 190        |
-| Mangrove Swamp                   | mangrove_swamp                   | 191        |
-| Nether Wastes                    | hell                             | 8          |
-| Crimson Forest                   | crimson_forest                   | 179        |
-| Warped Forest                    | warped_forest                    | 180        |
-| Soul Sand Valley                 | soulsand_valley                  | 178        |
-| Basalt Deltas                    | basalt_deltas                    | 181        |
-| The End                          | the_end                          | 9          |
-| Cherry Grove                     | cherry_grove                     | 192        |
+| Name                             | Resource location                  | Numeric ID |
+|----------------------------------|------------------------------------|------------|
+| Ocean                            | `ocean`                            | 0          |
+| Legacy Frozen Ocean              | `legacy_frozen_ocean`              | 10         |
+| Deep Ocean                       | `deep_ocean`                       | 24         |
+| Frozen Ocean                     | `frozen_ocean`                     | 46         |
+| Deep Frozen Ocean                | `deep_frozen_ocean`                | 47         |
+| Cold Ocean                       | `cold_ocean`                       | 44         |
+| Deep Cold Ocean                  | `deep_cold_ocean`                  | 45         |
+| Lukewarm Ocean                   | `lukewarm_ocean`                   | 42         |
+| Deep Lukewarm Ocean              | `deep_lukewarm_ocean`              | 43         |
+| Warm Ocean                       | `warm_ocean`                       | 40         |
+| Deep Warm Ocean                  | `deep_warm_ocean`                  | 41         |
+| River                            | `river`                            | 7          |
+| Frozen River                     | `frozen_river`                     | 11         |
+| Beach                            | `beach`                            | 16         |
+| Stony Shore                      | `stone_beach`                      | 25         |
+| Snowy Beach                      | `cold_beach`                       | 26         |
+| Forest                           | `forest`                           | 4          |
+| Wooded Hills                     | `forest_hills`                     | 18         |
+| Flower Forest                    | `flower_forest`                    | 132        |
+| Birch Forest                     | `birch_forest`                     | 27         |
+| Birch Forest Hills               | `birch_forest_hills`               | 28         |
+| Old Growth Birch Forest          | `birch_forest_mutated`             | 155        |
+| Tall Birch Hills                 | `birch_forest_hills_mutated`       | 156        |
+| Dark Forest                      | `roofed_forest`                    | 29         |
+| Dark Forest Hills                | `roofed_forest_mutated`            | 157        |
+| Jungle                           | `jungle`                           | 21         |
+| Jungle Hills                     | `jungle_hills`                     | 22         |
+| Modified Jungle                  | `jungle_mutated`                   | 149        |
+| Sparse Jungle                    | `jungle_edge`                      | 23         |
+| Modified Jungle Edge             | `jungle_edge_mutated`              | 151        |
+| Bamboo Jungle                    | `bamboo_jungle`                    | 48         |
+| Bamboo Jungle Hills              | `bamboo_jungle_hills`              | 49         |
+| Taiga                            | `taiga`                            | 5          |
+| Taiga Hills                      | `taiga_hills`                      | 19         |
+| Taiga Mountains                  | `taiga_mutated`                    | 133        |
+| Snowy Taiga                      | `cold_taiga`                       | 30         |
+| Snowy Taiga Hills                | `cold_taiga_hills`                 | 31         |
+| Snowy Taiga Mountains            | `cold_taiga_mutated`               | 158        |
+| Old Growth Pine Taiga            | `mega_taiga`                       | 32         |
+| Giant Tree Taiga Hills           | `mega_taiga_hills`                 | 33         |
+| Old Growth Spruce Taiga          | `redwood_taiga_mutated`            | 160        |
+| Giant Spruce Taiga Hills         | `redwood_taiga_hills_mutated`      | 161        |
+| Mushroom Fields                  | `mushroom_island`                  | 14         |
+| Mushroom Field Shore             | `mushroom_island_shore`            | 15         |
+| Swamp                            | `swampland`                        | 6          |
+| Swamp Hills                      | `swampland_mutated`                | 134        |
+| Savanna                          | `savanna`                          | 35         |
+| Savanna Plateau                  | `savanna_plateau`                  | 36         |
+| Windswept Savanna                | `savanna_mutated`                  | 163        |
+| Shattered Savanna Plateau        | `savanna_plateau_mutated`          | 164        |
+| Plains                           | `plains`                           | 1          |
+| Sunflower Plains                 | `sunflower_plains`                 | 129        |
+| Desert                           | `desert`                           | 2          |
+| Desert Hills                     | `desert_hills`                     | 17         |
+| Desert Lakes                     | `desert_mutated`                   | 130        |
+| Snowy Plains                     | `ice_plains`                       | 12         |
+| Snowy Mountains                  | `ice_mountains`                    | 13         |
+| Ice Spikes                       | `ice_plains_spikes`                | 140        |
+| Windswept Hills                  | `extreme_hills`                    | 3          |
+| Windswept Forest                 | `extreme_hills_plus_trees`         | 34         |
+| Windswept Gravelly Hills         | `extreme_hills_mutated`            | 131        |
+| Gravelly Mountains+              | `extreme_hills_plus_trees_mutated` | 162        |
+| Mountain Edge                    | `extreme_hills_edge`               | 20         |
+| Badlands                         | `mesa`                             | 37         |
+| Badlands Plateau                 | `mesa_plateau`                     | 39         |
+| Modified Badlands Plateau        | `mesa_plateau_mutated`             | 167        |
+| Wooded Badlands                  | `mesa_plateau_stone`               | 38         |
+| Modified Wooded Badlands Plateau | `mesa_plateau_stone_mutated`       | 166        |
+| Eroded Badlands                  | `mesa_bryce`                       | 165        |
+| Meadow                           | `meadow`                           | 186        |
+| Grove                            | `grove`                            | 185        |
+| Snowy Slopes                     | `snowy_slopes`                     | 184        |
+| Jagged Peaks                     | `jagged_peaks`                     | 182        |
+| Frozen Peaks                     | `frozen_peaks`                     | 183        |
+| Stony Peaks                      | `stony_peaks`                      | 189        |
+| Lush Caves                       | `lush_caves`                       | 187        |
+| Dripstone Caves                  | `dripstone_caves`                  | 188        |
+| Deep Dark                        | `deep_dark`                        | 190        |
+| Mangrove Swamp                   | `mangrove_swamp`                   | 191        |
+| Nether Wastes                    | `hell`                             | 8          |
+| Crimson Forest                   | `crimson_forest`                   | 179        |
+| Warped Forest                    | `warped_forest`                    | 180        |
+| Soul Sand Valley                 | `soulsand_valley`                  | 178        |
+| Basalt Deltas                    | `basalt_deltas`                    | 181        |
+| The End                          | `the_end`                          | 9          |
+| Cherry Grove                     | `cherry_grove`                     | 192        |
 
 
 

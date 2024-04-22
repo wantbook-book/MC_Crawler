@@ -17,7 +17,7 @@ class CONTENT_TYPE:
     O_LIST = 'ordered_list'
 
 class MC_BaiscCrawler:
-    EXCLUDE_TOPICS = ['Achievements', 'Advancements', 'History', 'Issues', 'Trivia', 'Gallery', 'References', 'External links', 'Sounds', 'Video', 'Videos', 'See also']
+    EXCLUDE_TOPICS = ['Achievements', 'Advancements', 'History', 'Issues', 'Trivia', 'Gallery', 'References', 'External links', 'Sounds', 'Video', 'Videos', 'See also', 'Fixes']
     H_NAMES = [f'h{i}' for i in range(8)]
     
     def __init__(self, urls: list[str], output_dir: Path):
@@ -72,7 +72,7 @@ class MC_BaiscCrawler:
         return False
 
 
-    def get_all_content(self, html_content: str):
+    def get_all_content(self, html_content: str)->list[dict]:
         all_content = []
         soup = BeautifulSoup(html_content, 'html.parser')
         h1 = soup.find('h1', recursive=True)
@@ -85,6 +85,8 @@ class MC_BaiscCrawler:
             }
         )
         mw_parser_output = soup.find('div', {'class': 'mw-parser-output'})
+        if mw_parser_output is None:
+            return []
         # short description of this article
         first_p = mw_parser_output.find('p', recursive=False)
         if first_p:
@@ -129,13 +131,16 @@ class MC_BaiscCrawler:
 
         first_h2 = mw_parser_output.find('h2', recursive=False)
         # print(first_h2)
-        h_title = first_h2.find_all('span', recursive=False)[0].get_text()
         next_sib = first_h2
         skip_section = False
-        if self.filter_section(h_title):
-            skip_section = True
-            next_sib = next_sib.find_next_sibling()
-            print(f'start skiping: {h_title}')
+        if first_h2:
+            h_title = first_h2.find_all('span', recursive=False)[0].get_text()
+            if self.filter_section(h_title):
+                skip_section = True
+                next_sib = next_sib.find_next_sibling()
+                print(f'start skiping: {h_title}')
+        if next_sib is None:
+            next_sib = mw_parser_output.contents[0]
         while next_sib:
             for i, h_name in enumerate(self.H_NAMES):
                 if next_sib.name == h_name:
@@ -205,7 +210,7 @@ class MC_BaiscCrawler:
                             all_content.append(
                                 {
                                     'type': CONTENT_TYPE.TEXT,
-                                    'content': '**'+content.get_text()+'**'
+                                    'content': '** '+content.get_text()+' **'
                                 }
                             )
                         elif content.name == 'dd':
@@ -343,13 +348,15 @@ class MC_BaiscCrawler:
                     # https://minecraft.wiki/w/Structure 页面奇怪的某行后面多了一个格子 Buried Treasure
                     if column_count < head_column_count:
                         colspan, rowspan = self.get_col_row_span(child)
-                        for i in range(column_count, column_count+colspan):
+                        max_range = min(head_column_count, column_count+colspan)
+                        for i in range(column_count, max_range):
                             if rowspan > row_spans[i]:
                                 row_spans[i] = rowspan
-                        column_count += colspan
 
-                        for _ in range(colspan-1):
+                        for _ in range(max_range - column_count - 1):
                             row.append('')
+
+                        column_count = max_range
 
                     # <sup>1</sup>/<sub>3</sub> 
                     # integer text before fraction
