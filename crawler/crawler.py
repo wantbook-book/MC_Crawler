@@ -245,6 +245,8 @@ class MC_BaiscCrawler:
                                     }
                                 )
                                 text = ''
+                elif next_sib.name in ['pre', 'style']:
+                    continue
                 else:
                     # items Cherry_Boat
                     # TODO: clean
