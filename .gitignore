@@ -1,5 +1,8 @@
+*.ipynb
+crawler/output
 venv/
 test/
+prompts/
 test_data/
 qa_examples/
 .DS_Store
