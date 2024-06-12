@@ -43,7 +43,7 @@ if __name__ == '__main__':
 
 - `base_url`: Minecraft Wiki Url
 
-- `urls`: There are 22 categories. You can select which categories to crawler by appending urls of categories to `urls`.
+- `urls`: There are 22 categories. You can select which categories to crawl by appending urls of categories to `urls`.
 
   ![image-20240524上午93305274](./images/image-20240524上午93305274.png)
 
@@ -55,20 +55,22 @@ if __name__ == '__main__':
 
 ## TODO
 
-- [ ] https://minecraft.wiki/w/Biome Binome name detail pages
+- [ ] https://minecraft.wiki/w/Biome 
 
-- [ ] https://minecraft.wiki/w/Crafting Hidden recipe information
+  - [ ] Binome name detail pages
 
-  - [ ] Formula ingredient quantity information
+- [ ] https://minecraft.wiki/w/Crafting
 
-- [ ] https://minecraft.wiki/w/Smelting hunger info 
+  - [ ] Hidden formula ingredient quantity information.
+
+- [ ] https://minecraft.wiki/w/Smelting
 
   - [ ] the page uses an image to represent hunger, need to convert it to text `hunger`
 
 - [ ] https://minecraft.wiki/w/Smithing 
 
   - [ ] Template, material detail links
-  - [ ] upgrading recipe: convert images to text info 
+  - [ ] upgrading recipe: need to convert images to text info 
 
 - [ ] https://minecraft.wiki/w/Structure
 
